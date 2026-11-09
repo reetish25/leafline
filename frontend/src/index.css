@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F7F8F4;
+    color: #19231B;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'Space Grotesk', monospace;
+  }
+}
+
+@layer components {
+  /* Crisp Agricultural Card */
+  .leaf-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E1E5DC;
+    border-radius: 1rem; /* 16px */
+    box-shadow: 0 1px 3px 0 rgba(25, 35, 27, 0.04), 0 1px 2px -1px rgba(25, 35, 27, 0.03);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Primary Button with tactile feel */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.75rem; /* 12px */
+    background-color: #1E3C2C;
+    color: #FFFFFF;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    box-shadow: 0 1px 2px 0 rgba(19, 42, 30, 0.12);
+    transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .btn-primary:hover:not(:disabled) {
+    background-color: #142A1E;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px -1px rgba(19, 42, 30, 0.2);
+  }
+  .btn-primary:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px 0 rgba(19, 42, 30, 0.1);
+  }
+  .btn-primary:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  /* Secondary Button */
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    background-color: #FFFFFF;
+    border: 1px solid #CAD0C3;
+    color: #19231B;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+    transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .btn-secondary:hover:not(:disabled) {
+    background-color: #F4F6F1;
+    border-color: #1E3C2C;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(25, 35, 27, 0.06);
+  }
+  .btn-secondary:active:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  /* Form Input */
+  .input-field {
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    border-radius: 0.75rem;
+    background-color: #FFFFFF;
+    border: 1px solid #CAD0C3;
+    color: #19231B;
+    font-size: 0.875rem;
+    transition: all 0.15s ease-in-out;
+  }
+  .input-field:focus {
+    outline: none;
+    border-color: #1E3C2C;
+    box-shadow: 0 0 0 3px rgba(30, 60, 44, 0.12);
+  }
+  .input-field::placeholder {
+    color: #78897C;
+  }
+
+  /* Status Badges */
+  .badge-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.2rem 0.625rem;
+    border-radius: 9999px;
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #EFF2EA;
+}
+::-webkit-scrollbar-thumb {
+  background: #CAD0C3;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #78897C;
+}
+
+/* Print Stylesheet */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

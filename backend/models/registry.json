@@ -1,0 +1,70 @@
+{
+  "models": [
+    {
+      "name": "MobileNetV2",
+      "version": "1.0.0",
+      "weights_file": "mobilenetv2_best.pt",
+      "architecture": "mobilenet_v2",
+      "input_size": [224, 224],
+      "mean": [0.485, 0.456, 0.406],
+      "std": [0.229, 0.224, 0.225],
+      "class_order": [
+        "Immune",
+        "Resistant",
+        "MR",
+        "MS",
+        "S",
+        "HS"
+      ],
+      "accuracy": 0.8111,
+      "latency_ms": 45,
+      "size_mb": 8.75,
+      "is_default": true,
+      "description": "MobileNetV2 fine-tuned on sunflower Alternaria blight leaf dataset. 6 severity classes (Immune to Highly Susceptible), evaluated at 81.11% test accuracy."
+    },
+    {
+      "name": "EfficientNetB0",
+      "version": "1.0.0",
+      "weights_file": "efficientnetb0_best.pt",
+      "architecture": "efficientnet_b0",
+      "input_size": [224, 224],
+      "mean": [0.485, 0.456, 0.406],
+      "std": [0.229, 0.224, 0.225],
+      "class_order": [
+        "Immune",
+        "Resistant",
+        "MR",
+        "MS",
+        "S",
+        "HS"
+      ],
+      "accuracy": 0.8123,
+      "latency_ms": 50,
+      "size_mb": 15.61,
+      "is_default": false,
+      "description": "EfficientNetB0 fine-tuned on sunflower Alternaria blight leaf dataset. 6 severity classes (Immune to Highly Susceptible), evaluated at 81.23% test accuracy."
+    },
+    {
+      "name": "Xception",
+      "version": "1.0.0",
+      "weights_file": "xception_best.pt",
+      "architecture": "legacy_xception",
+      "input_size": [299, 299],
+      "mean": [0.5, 0.5, 0.5],
+      "std": [0.5, 0.5, 0.5],
+      "class_order": [
+        "Immune",
+        "Resistant",
+        "MR",
+        "MS",
+        "S",
+        "HS"
+      ],
+      "accuracy": null,
+      "latency_ms": 85,
+      "size_mb": 83.59,
+      "is_default": false,
+      "description": "Xception fine-tuned on sunflower Alternaria blight leaf dataset. 6 severity classes (Immune to Highly Susceptible), native 299x299 resolution."
+    }
+  ]
+}

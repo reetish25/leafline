@@ -1,0 +1,47 @@
+﻿# Secrets
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+
+# Python
+venv/
+.venv/
+backend/venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Database and uploads
+*.db
+*.sqlite
+*.sqlite3
+backend/uploads/
+data/
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Model weights
+*.pt
+*.pth
+
+# Training files
+backend/models/notebooks/
+backend/new_model/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local context and test assets
+leafline_context.txt
+test_images/
+*.backup
